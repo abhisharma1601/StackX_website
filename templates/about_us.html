@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>About_Us</title>
+    <meta name="description" content="" />
+    <link rel="icon" href="./../static/images/StackX.png" type="image/x-icon">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+
+    <!-- Font Awesome if you need it
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+    -->
+    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
+    <!--Replace with your tailwind.css once created-->
+    <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
+    <!--Tailwind Custom Forms - use to standardise form fields - https://github.com/tailwindcss/custom-forms-->
+
+    <style>
+        @import url("https://rsms.me/inter/inter.css");
+
+        html {
+            font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+                "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+                "Noto Color Emoji";
+        }
+
+        .gradient {
+            background-image: linear-gradient(-225deg, #cbbacc 0%, #2580b3 100%);
+        }
+
+        button,
+        .gradient2 {
+            background-color: #f39f86;
+            background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);
+        }
+
+        /* Browser mockup code
+   * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+   * Live example: https://updown.io
+   */
+
+        .browser-mockup {
+            border-top: 2em solid rgba(230, 230, 230, 0.7);
+            position: relative;
+            height: 60vh;
+        }
+
+        .browser-mockup:before {
+            display: block;
+            position: absolute;
+            content: "";
+            top: -1.25em;
+            left: 1em;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 50%;
+            background-color: #f44;
+            box-shadow: 0 0 0 2px #f44, 1.5em 0 0 2px #9b3, 3em 0 0 2px #fb5;
+        }
+
+        .browser-mockup>* {
+            display: block;
+        }
+
+        /* Custom code for the demo */
+    </style>
+</head>
+
+<body class="bg-gray-100 leading-relaxed tracking-wide flex flex-col">
+    <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-2">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-2">
+            <div class="pl-4 flex items-center">
+                <a class="text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
+                    StackX
+                </a>
+            </div>
+
+            <div class="block lg:hidden pr-4">
+                <button id="nav-toggle"
+                    class="flex items-center px-3 py-2 border rounded text-gray-500 border-gray-600 hover:text-gray-800 hover:border-green-500 appearance-none focus:outline-none">
+                    <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <title>Menu</title>
+                        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block mt-2 lg:mt-0 text-black p-4 lg:p-0 z-20"
+                id="nav-content">
+                <ul class="list-reset lg:flex justify-end flex-1 items-center">
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="./about_us">About
+                            Us</a>
+                    </li>
+                    <li class="mr-3">
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Career</a>
+                    </li>
+                </ul>
+                <button id="navAction"
+                    class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
+                    Host App
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="h-screen pb-14 bg-right bg-white">
+
+
+        <!--Main-->
+        <div class="container pt-24 md:pt-22 px-12 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+
+            <!--Left Col-->
+            <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+                <h1
+                    class="my-4 text-3xl md:text-5xl text-blue-500 font-bold leading-tight text-center md:text-left slide-in-bottom-h1">
+                    Push or Pop, We got every option here.</h1>
+                <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left slide-in-bottom-subtitle">
+                    We are a team of developers creating apps and games for public use and offering many services at
+                    very low costs. We are also open for other developers if they want to collab with us and want to
+                    launch there app or game on playstore.</p>
+
+                <p class="text-gray-700 font-bold pb-8 lg:pb-6 text-center md:text-left fade-in">Download our apps:</p>
+                <div class="flex w-full justify-center md:justify-start pb-24 lg:pb-0 fade-in">
+                    <img src="./../static/images/Play Store.svg" class="h-12 pr-4 bounce-top-icons">
+                </div>
+
+            </div>
+
+            <!--Right Col-->
+            <div class="w-full xl:w-3/5 py-6 overflow-y-hidden">
+                <img class="w-5/6 mx-auto lg:mr-0 slide-in-bottom" src="./../static/images/devices.svg">
+            </div>
+
+            <!--Footer-->
+
+
+        </div>
+
+
+
+
+    </div>
+
+    <section class="text-gray-600 body-font bg-white">
+        <div class="container px-12 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="text-4xl font-bold title-font mb-4 text-gray-900 tracking-widest">OUR TEAM</h1>
+
+            </div>
+            <div class="flex flex-wrap -m-4">
+
+
+
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                            src="https://media-exp1.licdn.com/dms/image/C4D03AQGMuhmMe6LcbQ/profile-displayphoto-shrink_400_400/0/1589981905919?e=1636588800&v=beta&t=_ky6fRGlOggDjIBtYUj-5qy0a8ULQ5vs5cS8Ig83B9o">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Abhishek Sharma</h2>
+                            <h3 class="text-gray-500 mb-3">App Developer</h3>
+                            <p class="mb-4">I am co-founder and full-stack app developer in this company. My skills include Flutter,
+                                Firebase, SQLite3 and Figma for app designing. Python and C++ are the languages used by me for programming.</p>
+                            <span class="inline-flex">
+                                <a class="ml-3 text-gray-500"
+                                    href="https://www.linkedin.com/in/abhishek-sharma-20b6071aa/">
+                                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path stroke="none"
+                                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                        </path>
+                                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 lg:w-1/2">
+                    <div
+                        class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left">
+                        <img alt="team"
+                            class="flex-shrink-0 rounded-lg w-48 h-48 object-cover object-center sm:mb-0 mb-4"
+                            src="https://media-exp1.licdn.com/dms/image/C4E03AQFuTfVlkTSkOg/profile-displayphoto-shrink_400_400/0/1630949943813?e=1636588800&v=beta&t=W4oeIOM2hp6iytaNJ566r2cbiddb57XBcI-fiuG1Lug">
+                        <div class="flex-grow sm:pl-8">
+                            <h2 class="title-font font-medium text-lg text-gray-900">Vaibhav Gautam</h2>
+                            <h3 class="text-gray-500 mb-3">Game Developer</h3>
+                            <p class="mb-4">I am co-founder and full-stack Game developer and graphic designer in this company. I primarly use Gotot engine, Unity and Blender. C#, C++ and GDScript are the languages used by me for programming. </p>
+                            <span class="inline-flex">
+                                <a class="ml-3 text-gray-500"
+                                    href="https://www.linkedin.com/in/vaibhav-gautam-82548020a/">
+                                    <svg fill="currentColor" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                                        <path stroke="none"
+                                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z">
+                                        </path>
+                                        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                                    </svg>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>   
+
+    <footer class="bg-gray-100">
+        <div class="container mx-auto mt-8 px-8">
+            <div class="w-full flex flex-col md:flex-row py-6">
+                <div class="flex-1 mb-6">
+                    <a class="text-orange-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="#">
+
+                        StackX
+                    </a>
+                </div>
+
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Links</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">FAQ</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Help</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Support</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Legal</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Terms</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Privacy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">Social</p>
+                    <ul class="list-reset mb-6">
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Facebook</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Linkedin</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-1">
+                    <p class="uppercase font-extrabold text-gray-500 md:mb-6">
+                        Company
+                    </p>
+                    <ul class="list-reset mb-6">
+
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href=""
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">About
+                                Us</a>
+                        </li>
+                        <li class="mt-2 inline-block mr-2 md:block md:mr-0">
+                            <a href="#"
+                                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        /*Toggle dropdown list*/
+        /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
+        var navMenuDiv = document.getElementById("nav-content");
+        var navMenu = document.getElementById("nav-toggle");
+
+        document.onclick = check;
+        function check(e) {
+            var target = (e && e.target) || (event && event.srcElement);
+
+            //Nav Menu
+            if (!checkParent(target, navMenuDiv)) {
+                // click NOT on the menu
+                if (checkParent(target, navMenu)) {
+                    // click on the link
+                    if (navMenuDiv.classList.contains("hidden")) {
+                        navMenuDiv.classList.remove("hidden");
+                    } else {
+                        navMenuDiv.classList.add("hidden");
+                    }
+                } else {
+                    // click both outside link and outside menu, hide menu
+                    navMenuDiv.classList.add("hidden");
+                }
+            }
+        }
+        function checkParent(t, elm) {
+            while (t.parentNode) {
+                if (t == elm) {
+                    return true;
+                }
+                t = t.parentNode;
+            }
+            return false;
+        }
+    </script>
+
+
+
+</body>
+
+</html>
