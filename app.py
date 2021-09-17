@@ -16,10 +16,16 @@ def mobile_apps():
 	return render_template('Mobile_Apps.html')
 	
 @app.route('/games')
-def mobile_games():
+def mobile_games():    
 	return render_template('Mobile_Games.html')	
+
+@app.route('/terms-conditions')
+def terms():    
+	return render_template('terms.html')	
 
 
 # main driver function
 if __name__ == '__main__':	
 	app.run(debug=True)
+
+
