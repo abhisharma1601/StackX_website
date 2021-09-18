@@ -307,11 +307,11 @@
     <div class="flex w-full justify-center items-end">
       <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
         <!-- <label for="hero-field" class="leading-7 text-sm text-gray-600">Enter Email-Id</label> -->
-        <input placeholder="Enter email-id" type="text" id="eid" name="Email-Id"
+        <form action="/" onsubmit="msgprint()" method="POST" name="Updates"><input placeholder="Enter email-id" type="text" id="eid" name="Email-Id"
           class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-yellow-200 focus:bg-transparent border border-gray-300 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
-      <button
-        class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Subscribe</button>
+      <button type="submit"
+        class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Subscribe</button></form>
     </div>
   </section>
 
@@ -396,6 +396,19 @@
 
     var navMenuDiv = document.getElementById("nav-content");
     var navMenu = document.getElementById("nav-toggle");
+
+    function msgprint(value) {  
+      let x = document.forms["Updates"]["Email-Id"].value;
+      if(x=="")
+      {
+        alert("Enter email address!"); 
+      }
+      else
+      {
+        alert("Thank You For Subscribing."); 
+      }
+       
+   }  
 
     document.onclick = check;
     function check(e) {

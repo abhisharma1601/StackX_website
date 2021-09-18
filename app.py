@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
 
 app = Flask(__name__)
 
@@ -21,7 +21,14 @@ def mobile_games():
 
 @app.route('/terms-conditions')
 def terms():    
-	return render_template('terms.html')	
+	return render_template('terms.html')
+
+@app.route('/', methods=["POST"])
+def subscribe():    
+	text = request.form["Email-Id"]
+	print(text)	
+	return render_template('index.html')
+    	
 
 
 # main driver function
