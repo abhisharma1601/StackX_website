@@ -5,15 +5,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mobile_apps</title>
-    <meta name="description" content="" />
     <link rel="icon" href="./../static/images/StackX.png" type="image/x-icon">
+    <title>Stack-X</title>
+    <meta name="description" content="" />
     <meta name="keywords" content="" />
     <meta name="author" content="" />
 
     <!-- Font Awesome if you need it
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
-    -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
+  -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet" />
     <!--Replace with your tailwind.css once created-->
     <link href="https://unpkg.com/@tailwindcss/custom-forms/dist/custom-forms.min.css" rel="stylesheet" />
@@ -40,9 +40,9 @@
         }
 
         /* Browser mockup code
-   * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
-   * Live example: https://updown.io
-   */
+ * Contribute: https://gist.github.com/jarthod/8719db9fef8deb937f4f
+ * Live example: https://updown.io
+ */
 
         .browser-mockup {
             border-top: 2em solid rgba(230, 230, 230, 0.7);
@@ -72,6 +72,7 @@
 </head>
 
 <body class="bg-gray-100 leading-relaxed tracking-wide flex flex-col">
+    <!--Nav-->
     <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-2">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-2">
           <div class="pl-4 flex items-center">
@@ -110,59 +111,105 @@
         </div>
       </nav>
 
-    <section class="bg-white text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <img height="400" width="400" class="object-cover object-center rounded" alt="hero"
-                    src="./../static/Apps_Logos/fitzen.png">
-            </div>
-            <div
-                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">FitZen
+    <section>
+        <div style="padding: 25px">
+            <div>
+                <div>
+                    <form action="/submit" method="POST">
+                        <div class="shadow sm:rounded-md sm:overflow-hidden">
+                            <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <label for="company_website" class="block text-sm font-medium text-gray-700">
+                                            Website
+                                        </label>
+                                        <div class="mt-1 flex rounded-md shadow-sm">
 
-                </h1>
-                <p class="mb-8 leading-relaxed">It is a cross platform Fitness mobile app which provides features like
-                    workouts, transformation plans, Diet plans, Fitness Calculator and LogBook. User can also register
-                    and save his/her data. Logbook will provide track of users progress and can represent it
-                    graphically. Access to pre-made transformation plans and chat with a fitness expert is also
-                    avaiblable under paid plans.</p>
-                <div class="flex justify-center">
-                    <a><button
-                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Download</button></a>
-                    <a><button
-                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Share</button></a>
+                                            <input style="padding: 10px" type="text" name="company_website"
+                                                id="company_website"
+                                                class=" flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                placeholder="www.example.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-6">
+                                    <div class="col-span-3 sm:col-span-2">
+                                        <label for="company_website" class="block text-sm font-medium text-gray-700">
+                                            Email-Id
+                                        </label>
+                                        <div class="mt-1 flex rounded-md shadow-sm">
+
+                                            <input style="padding: 10px" type="text" name="email"
+                                                id="email"
+                                                class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300"
+                                                placeholder="xyz@email.com">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label for="about" class="block text-sm font-medium text-gray-700">
+                                        About App
+                                    </label>
+                                    <div class="mt-1">
+                                        <textarea style="padding: 10px" id="about" name="about" rows="5"
+                                            class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 mt-1 block w-full sm:text-sm border-gray-300 rounded-md"
+                                            placeholder="Short description about the app.."></textarea>
+                                    </div>                                    
+                                </div>
+
+
+
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">
+                                        APK's
+                                    </label>
+                                    <div
+                                        class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                        <div class="space-y-1 text-center">
+                                            <svg class="mx-auto h-12 w-12 text-gray-400" stroke="currentColor"
+                                                fill="none" viewBox="0 0 48 48" aria-hidden="true">
+                                                <path
+                                                    d="M28 8H12a4 4 0 00-4 4v20m32-12v8m0 0v8a4 4 0 01-4 4H12a4 4 0 01-4-4v-4m32-4l-3.172-3.172a4 4 0 00-5.656 0L28 28M8 32l9.172-9.172a4 4 0 015.656 0L28 28m0 0l4 4m4-24h8m-4-4v8m-12 4h.02"
+                                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                            <div class="flex text-sm text-gray-600">
+                                                <label for="file-upload"
+                                                    class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                                    <span>Upload a file</span>
+                                                    <input id="file-upload" name="file-upload" type="file"
+                                                        class="sr-only">
+                                                </label>
+                                                <p class="pl-1">or drag and drop</p>
+                                            </div>
+                                            <p class="text-xs text-gray-500">
+                                                AAB file up to 100MB
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                                <button type="submit"
+                                    class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="bg-white text-gray-600 body-font">
-        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                <img height="400" width="400" class="object-cover object-center rounded" alt="hero"
-                    src="./../static/Apps_Logos/astro.png">
-            </div>
-            <div
-                class="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                <h1 class="title-font sm:text-5xl text-3xl mb-4 font-medium text-gray-900">AstroDrishti
 
-                </h1>
-                <p class="mb-8 leading-relaxed">It is a cross platform mobile app which provides user his birth kundli
-                    using api and also using various conditions provided by astrologer it will predict the good and bad
-                    in kundli . Also person can login using google and save kundli for further ease. You can also order
-                    for detailed kundli report for just 299/-.</p>
-                <div class="flex justify-center">
-                    <a href="https://play.google.com/store/apps/details?id=in.astrodrishti.app"><button
-                            class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Download</button></a>
-                    <a><button
-                            class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Share</button></a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-  
 
+
+
+
+    <!--Footer-->
     <footer class="bg-white ">
         <div class="container mx-auto mt-8 px-8">
           <div class="w-full flex flex-col md:flex-row py-6">
@@ -238,6 +285,17 @@
         var navMenuDiv = document.getElementById("nav-content");
         var navMenu = document.getElementById("nav-toggle");
 
+        function msgprint(value) {
+            let x = document.forms["Updates"]["Email-Id"].value;
+            if (x == "") {
+                alert("Enter email address!");
+            }
+            else {
+                alert("Thank You For Subscribing.");
+            }
+
+        }
+
         document.onclick = check;
         function check(e) {
             var target = (e && e.target) || (event && event.srcElement);
@@ -268,9 +326,6 @@
             return false;
         }
     </script>
-
-
-
 </body>
 
 </html>

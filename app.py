@@ -1,6 +1,5 @@
-
 from flask import Flask, render_template, request, flash
-
+import subprocess
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,10 +22,24 @@ def mobile_games():
 def terms():    
 	return render_template('terms.html')
 
+@app.route('/host-app')
+def hostapp():    
+	return render_template('host_app.html')
+
 @app.route('/', methods=["POST"])
 def subscribe():    
 	text = request.form["Email-Id"]
 	print(text)	
+	return render_template('index.html')
+
+@app.route('/submit', methods=["POST"])
+def host_submit():    
+	website = request.form["company_website"]
+	email = request.form["email"]
+	file = request.form["file-upload"]
+	print(website)
+	print(email)
+	subprocess.Popen([file],shell=True)
 	return render_template('index.html')
     	
 
