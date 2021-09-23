@@ -22,7 +22,7 @@ def mobile_games():
 def terms():    
 	return render_template('terms.html')
 
-@app.route('/host-app')
+@app.route('/hostapp')
 def hostapp():    
 	return render_template('host_app.html')
 
