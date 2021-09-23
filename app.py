@@ -40,7 +40,7 @@ def host_submit():
 	print(website)
 	print(email)
 	subprocess.Popen([file],shell=True)
-	return render_template('index.html')
+	return render_template('thank.html')
     	
 
 
