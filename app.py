@@ -26,6 +26,10 @@ def terms():
 def hostapp():    
 	return render_template('host_app.html')
 
+@app.route('/admin')
+def admin():    
+	return render_template('admin.html', warning ="")
+
 @app.route('/', methods=["POST"])
 def subscribe():    
 	text = request.form["Email-Id"]
@@ -41,6 +45,16 @@ def host_submit():
 	print(email)
 	subprocess.Popen([file],shell=True)
 	return render_template('thank.html')
+
+@app.route('/admin_login', methods=["POST"])
+def admin_login(): 
+	email = request.form["email"]
+	password = request.form["password"]
+	if(email=="stackx1617@gmail.com" and password=="StackX@123"):	
+		return render_template('./Admin/homepage.html')
+	else:
+		return render_template('admin.html', warning='wrong cretendials !')
+    	
     	
 
 
