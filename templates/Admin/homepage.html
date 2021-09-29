@@ -76,10 +76,10 @@
 
 <body class="bg-gray-100 leading-relaxed tracking-wide flex flex-col">
   <!--Nav-->
-  <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-2 bg-grey">
+  <nav id="header" class="w-full z-30 top-0 text-white py-1 lg:py-2 bg-black">
     <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-2 lg:py-2">
       <div class="pl-4 flex items-center">
-        <a class="text-black no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
+        <a class="text-white no-underline hover:no-underline font-bold text-2xl lg:text-4xl" href="/">
 
           StackX
         </a>
@@ -100,23 +100,46 @@
         id="nav-content">
         <ul class="list-reset lg:flex justify-end flex-1 items-center">
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="./about_us">About Us</a>
+            <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="./about_us">Admob</a>
           </li>
           <li class="mr-3">
-            <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Career</a>
+            <a class="inline-block py-2 px-4 text-white font-bold no-underline" href="#">Career</a>
           </li>
         </ul>
         <a href="hostapp"><button id="navAction"
-          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
-          Host App
-        </button></a>
+            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
+            Play Console
+          </button></a>
       </div>
     </div>
   </nav>
 
-  <section>
-      
-  </section>
+  <div style="padding: 20px;" class="mx-1">
+    <section style="padding: 10px; background-color:darkgray; border-radius: 10px; ">
+      {% for i in orders %}
+      <div style="background-color: grey; margin: 10px; border-radius: 10px; padding: 15px; border-color: black;">
+        <!-- <p style="color: black; font-size: 30px;">Total Income Generated {{ income }} in the month of {{ month }}</p> -->
+        <!-- <p style="padding: 10px;">{{ i["Name"] }} with order id: {{ i["Order ID"] }}  <input id="file-upload" name="file-upload" type="file"><button>Submit</button> </p> -->
+
+
+
+        <th scope="col">
+          <p style="font-weight: 700; color: black;">{{ i["Name"] }}</p>
+          </tr>Order id: <tr>{{ i["Order ID"] }}
+        </th>
+        <th scope="col"><button style="padding: 10px; border-radius: 10px; margin-left: 40px; margin-right: 10px;"><p style="font-weight: 700;">Details</p></button></th>
+        <th scope="col"><input style="color: black; font-weight: 700; border-radius: 20px;" type="file" name="kd_file"></th>
+        <span ></span>
+        <th scope="col"><button style="padding: 10px; border-radius: 10px; "><p style="font-weight: 700;">Submit</p></button></th>
+        
+
+
+
+      </div>
+      {% endfor %}
+
+    </section>
+  </div>
 
 
   <script>
@@ -126,18 +149,16 @@
     var navMenuDiv = document.getElementById("nav-content");
     var navMenu = document.getElementById("nav-toggle");
 
-    function msgprint(value) {  
+    function msgprint(value) {
       let x = document.forms["Updates"]["Email-Id"].value;
-      if(x=="")
-      {
-        alert("Enter email address!"); 
+      if (x == "") {
+        alert("Enter email address!");
       }
-      else
-      {
-        alert("Thank You For Subscribing."); 
+      else {
+        alert("Thank You For Subscribing.");
       }
-       
-   }  
+
+    }
 
     document.onclick = check;
     function check(e) {
