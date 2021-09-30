@@ -123,31 +123,60 @@
 
 
 
-        <th scope="col">
-          <p style="font-weight: 700; color: black;">{{ i["Name"] }}</p>
-          </tr>Order id: <tr>{{ i["Order ID"] }}
-        </th>
-        <th scope="col"><button style="padding: 10px; border-radius: 10px; margin-left: 40px; margin-right: 10px;"><p style="font-weight: 700;">Details</p></button></th>
-        <th scope="col"><input style="color: black; font-weight: 700; border-radius: 20px;" type="file" name="kd_file"></th>
-        <span ></span>
-        <th scope="col"><button style="padding: 10px; border-radius: 10px; "><p style="font-weight: 700;">Submit</p></button></th>
-        
+
+
+        <form action="/file_upload" method="POST">
+          <th scope="col">
+            <p style="font-weight: 700; color: black;">{{ i["Name"] }}</p>
+            </tr>Order id: <tr>{{ i["Order ID"] }}
+          </th>
+          <th scope="col"><button style="padding: 10px; border-radius: 10px; margin-left: 40px; margin-right: 10px;">
+              <p style="font-weight: 700;">Details</p>
+            </button></th>
+          <th scope="col"><input style="color: black; font-weight: 700; border-radius: 20px;" type="file"
+              name="kd_file">
+          </th>
+          <th scope="col"><button type="submit" style="padding: 10px; border-radius: 10px; margin-left: 0px; ">
+              <p style="font-weight: 700;">Submit</p>
+            </button></th>
+        </form>
+
 
 
 
       </div>
+
       {% endfor %}
+
+
+
+
 
     </section>
   </div>
 
 
+
+
+  <script src="//static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
   <script>
     /*Toggle dropdown list*/
     /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
 
-    var navMenuDiv = document.getElementById("nav-content");
-    var navMenu = document.getElementById("nav-toggle");
+    function givefile() {
+      const client = filestack.init(AtZTl4WS1ebwNwFPCWkgHz);
+      client.picker().open();
+    }
+
+
+    function submitfile() {
+      const link = '/putfile';
+      $.getJSON(link,
+        function (data) {
+          console.log(link)
+        });
+      return false;
+    }
 
     function msgprint(value) {
       let x = document.forms["Updates"]["Email-Id"].value;
@@ -160,35 +189,7 @@
 
     }
 
-    document.onclick = check;
-    function check(e) {
-      var target = (e && e.target) || (event && event.srcElement);
 
-      //Nav Menu
-      if (!checkParent(target, navMenuDiv)) {
-        // click NOT on the menu
-        if (checkParent(target, navMenu)) {
-          // click on the link
-          if (navMenuDiv.classList.contains("hidden")) {
-            navMenuDiv.classList.remove("hidden");
-          } else {
-            navMenuDiv.classList.add("hidden");
-          }
-        } else {
-          // click both outside link and outside menu, hide menu
-          navMenuDiv.classList.add("hidden");
-        }
-      }
-    }
-    function checkParent(t, elm) {
-      while (t.parentNode) {
-        if (t == elm) {
-          return true;
-        }
-        t = t.parentNode;
-      }
-      return false;
-    }
   </script>
 </body>
 
