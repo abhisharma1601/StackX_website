@@ -48,6 +48,10 @@ def subscribe():
 	print(text)	
 	return render_template('index.html')
 
+@app.route('/astrodrishti')
+def astrodrishti(): 
+	return render_template('./Astrodrishti/index.html')
+
 @app.route('/submit', methods=["POST"])
 def host_submit():    
 	website = request.form["company_website"]
