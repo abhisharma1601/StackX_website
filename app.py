@@ -1,18 +1,18 @@
 from flask import Flask, render_template, request, flash
 import subprocess
 app = Flask(__name__)
-# import firebase_admin
-# from firebase_admin import credentials
-# from firebase_admin import firestore
-# from firebase_admin import storage
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import firestore
+from firebase_admin import storage
 
-# cred = credentials.Certificate("serviceAccountKey.json")
-# firebase_admin.initialize_app(cred,{
-#   'projectId': 'astrodrishti2',
-#   'storageBucket': 'astrodrishti2.appspot.com'
-# })
+cred = credentials.Certificate("serviceAccountKey.json")
+firebase_admin.initialize_app(cred,{
+  'projectId': 'astrodrishti2',
+  'storageBucket': 'astrodrishti2.appspot.com'
+})
 
-# db = firestore.client()
+db = firestore.client()
 
 @app.route('/')
 def index():
