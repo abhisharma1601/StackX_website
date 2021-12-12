@@ -13,6 +13,7 @@
   you." />
   <meta name="keywords" content="apps, astrology, games, dodgebar, pixstellar, playsore, stackx" />
   <meta name="author" content="Stack-X" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- Font Awesome if you need it
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.2/css/all.css">
@@ -106,10 +107,10 @@
             <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Blogs</a>
           </li>
         </ul>
-        <a><button id="navAction"
-            class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
-            Join Us
-          </button></a>
+        <a href="/join_StackX"><button id="navAction"
+          class="mx-auto lg:mx-0 hover:underline text-gray-800 font-extrabold rounded mt-4 lg:mt-0 py-4 px-8 shadow opacity-75">
+          Join Us
+        </button></a>
       </div>
     </div>
   </nav>
@@ -310,13 +311,11 @@
     <div class="flex w-full justify-center items-end">
       <div class="relative mr-4 lg:w-full xl:w-1/2 w-2/4 md:w-full text-left">
         <!-- <label for="hero-field" class="leading-7 text-sm text-gray-600">Enter Email-Id</label> -->
-        <form action="/" onsubmit="msgprint()" method="POST" name="Updates"><input placeholder="Enter email-id"
-            type="text" id="eid" name="Email-Id"
-            class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-yellow-200 focus:bg-transparent border border-gray-300 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        <form action="/" onsubmit="msgprint()" method="POST" name="Updates"><input placeholder="Enter email-id" type="text" id="eid" name="Email-Id"
+          class="w-full bg-gray-100 bg-opacity-50 rounded focus:ring-2 focus:ring-yellow-200 focus:bg-transparent border border-gray-300 focus:border-yellow-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
       </div>
       <button type="submit"
-        class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Subscribe</button>
-      </form>
+        class="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">Subscribe</button></form>
     </div>
   </section>
 
@@ -337,15 +336,14 @@
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="#" class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">FAQ</a>
             </li>
-
+           
           </ul>
         </div>
         <div class="flex-1">
           <p class="uppercase font-extrabold text-gray-500 md:mb-6">Legal</p>
           <ul class="list-reset mb-6">
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="\terms-conditions"
-                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Terms</a>
+              <a href="\terms-conditions" class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">Terms</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
               <a href="#"
@@ -377,8 +375,7 @@
           <ul class="list-reset mb-6">
 
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-              <a href="/about_us"
-                class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">About
+              <a href="/about_us" class="font-light no-underline hover:underline text-gray-800 hover:text-orange-500">About
                 Us</a>
             </li>
             <li class="mt-2 inline-block mr-2 md:block md:mr-0">
@@ -398,16 +395,18 @@
     var navMenuDiv = document.getElementById("nav-content");
     var navMenu = document.getElementById("nav-toggle");
 
-    function msgprint(value) {
+    function msgprint(value) {  
       let x = document.forms["Updates"]["Email-Id"].value;
-      if (x == "") {
-        alert("Enter email address!");
+      if(x=="")
+      {
+        alert("Enter email address!"); 
       }
-      else {
-        alert("Thank You For Subscribing.");
+      else
+      {
+        alert("Thank You For Subscribing."); 
       }
-
-    }
+       
+   }  
 
     document.onclick = check;
     function check(e) {
